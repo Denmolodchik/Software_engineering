@@ -1,8 +1,8 @@
 def authorization 
     puts "Введите фамилию"
-    surname = gets.delete("\n") 
+    surname = gets.chomp 
     puts "Введите имя"
-    name = gets.delete("\n")
+    name = gets.chomp
     puts "Введите возраст"
     age = gets.to_i
 
@@ -37,8 +37,7 @@ def menu
         number = gets.to_i
         if number == 1 
             authorization()
-        end
-        if number == 2
+        elsif number == 2
             check()
         end
         break if number == -1
